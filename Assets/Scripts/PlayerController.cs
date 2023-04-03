@@ -8,11 +8,11 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 5.0f;
     [SerializeField] private float maxSpeed;
-    public TextMeshProUGUI countText;
+    public TextMeshProUGUI scoreText;
     public GameObject winTextObject;
 
     private Rigidbody rb;
-    //private int count;
+    //private int score;
     private float horizontalMovement;
     private float verticalMovement;
 
@@ -20,9 +20,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        //count = 0;
+        //score = 0;
         
-        //SetCountText();
+        //SetScoreText();
         winTextObject.SetActive(false);
     }
 
@@ -45,10 +45,14 @@ public class PlayerController : MonoBehaviour
     //     movementY = movementVector.y;
     // }
 
-    // void SetCountText()
+// ----------------------------------------------------------------------------------------------------------------------------------------------------
+// Scoring somewhat like the roll a ball project
+// ----------------------------------------------------------------------------------------------------------------------------------------------------
+
+    // void SetScoreText()
     // {
-    //     countText.text = "Count: " + count.ToString();
-    //     if(count >= 19)
+    //     scoreText.text = "Score: " + score.ToString();
+    //     if(score >= 19)
     //     {
     //         winTextObject.SetActive(true);
     //     }
@@ -59,7 +63,7 @@ public class PlayerController : MonoBehaviour
         horizontalMovement = Input.GetAxis("Horizontal");
         verticalMovement = Input.GetAxis("Vertical");
 
-        Vector3 movementDirection = (transform.forward * verticalMovement + transform.right * horizontalMovement).normalized;
+        Vector3 movementDirection = (transform.forward * -verticalMovement + transform.right * -horizontalMovement).normalized;
 
         rb.AddForce(movementDirection * speed, ForceMode.Force);
 
@@ -71,9 +75,9 @@ public class PlayerController : MonoBehaviour
     //     if(other.gameObject.CompareTag("PickUp"))
     //     {
     //         other.gameObject.SetActive(false);
-    //         count = count + 1;
+    //         score = score + 1;
 
-    //         SetCountText();
+    //         SetScoreText();
     //     }
 
     // }
