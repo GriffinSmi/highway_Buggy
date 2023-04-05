@@ -7,10 +7,10 @@ using TMPro;
 public class PlayerController : MonoBehaviour
 {
 
-    public float leftRightSpeed = 4.0f;
+    public float leftRightSpeed = 5.0f;
 
 
-    public float speed = 5.0f;
+    public float speed = 10.0f;
     [SerializeField] private float maxSpeed;
     public TextMeshProUGUI scoreText;
     public GameObject winTextObject;
