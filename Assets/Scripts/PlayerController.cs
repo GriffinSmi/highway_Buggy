@@ -6,6 +6,10 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
+
+    public float leftRightSpeed = 4.0f;
+
+
     public float speed = 5.0f;
     [SerializeField] private float maxSpeed;
     public TextMeshProUGUI scoreText;
@@ -60,13 +64,33 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        horizontalMovement = Input.GetAxis("Horizontal");
-        verticalMovement = Input.GetAxis("Vertical");
+        if (Input.GetAxis("Mouse Y") > 0)
+        {
+            if (this.gameObject.transform.position.x > levelBoundary.rightSide)
+            {
+                transform.Translate(Vector3.left * Time.deltaTime * leftRightSpeed);
+            }
+        }
 
-        Vector3 movementDirection = (transform.forward * -verticalMovement + transform.right * -horizontalMovement).normalized;
+        if (Input.GetAxis("Mouse Y") < 0)
+        {
+            if (this.gameObject.transform.position.x < levelBoundary.leftSide)
+            {
+                transform.Translate(Vector3.left * Time.deltaTime * leftRightSpeed * -1);
+            }
+        }
 
-        rb.AddForce(movementDirection * speed, ForceMode.Force);
 
+        //--------------------------------------------------------------------------------------------------------
+        //Might not need this vvvvvv
+
+        //horizontalMovement = (Input.GetAxis("Mouse Y"));
+        //verticalMovement = Input.GetAxis("Vertical");
+
+        //Vector3 movementDirection = (transform.forward * -verticalMovement + transform.right * -horizontalMovement).normalized;
+
+        //rb.AddForce(movementDirection * speed, ForceMode.Force);
+        //--------------------------------------------------------------------------------------------------------
         
     }
 
