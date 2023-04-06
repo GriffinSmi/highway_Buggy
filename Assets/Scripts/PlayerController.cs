@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 10.0f;
     [SerializeField] private float maxSpeed;
     public TextMeshProUGUI scoreText;
-    public GameObject winTextObject;
+    //public GameObject winTextObject;
 
     private Rigidbody rb;
     //private int score;
@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
         //score = 0;
         
         //SetScoreText();
-        winTextObject.SetActive(false);
+        //winTextObject.SetActive(false);
     }
 
     void Update()
