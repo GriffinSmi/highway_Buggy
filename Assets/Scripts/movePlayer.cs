@@ -20,7 +20,7 @@ public class movePlayer : MonoBehaviour
     {
         if (other.gameObject.tag == "lethal")
         {
-            Destroy (gameObject);
+            this.gameObject.SetActive(false);
         }
     }
 }
