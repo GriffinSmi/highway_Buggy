@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: c98f836516310e44e9b93a3345b9cfde, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 736832a78807ddf4bb72e296ff1be7dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinFX: {fileID: 2340310689338118560}
 --- !u!82 &2340310689338118560
 AudioSource:
   m_ObjectHideFlags: 0
@@ -138,13 +139,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5d921cf54b08b854eaac80e7f41e5fde, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.389
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 28
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
