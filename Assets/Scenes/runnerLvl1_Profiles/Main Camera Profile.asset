@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
-  m_Name: AFRC Volume Profile
+  m_Name: Main Camera Profile
   m_EditorClassIdentifier: 
   settings:
-  - {fileID: 8352560460880037816}
---- !u!114 &8352560460880037816
+  - {fileID: 1388222211155775955}
+--- !u!114 &1388222211155775955
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -32,19 +32,19 @@ MonoBehaviour:
     value: 0
   intensity:
     overrideState: 1
-    value: 19.3
+    value: 8.7
   intensityX:
     overrideState: 1
-    value: 1
+    value: 0.167
   intensityY:
     overrideState: 1
-    value: 1
+    value: 0.342
   centerX:
     overrideState: 1
-    value: 0
+    value: -0.598
   centerY:
     overrideState: 1
-    value: 0
+    value: 0.472
   scale:
     overrideState: 1
-    value: 2.15
+    value: 2.06
